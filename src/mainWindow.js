@@ -7,12 +7,12 @@ module.exports = {
         mainWin = new BrowserWindow( {
             width: 800, 
             height: 600,
-            skipTaskbar: true,
-            title: 'Translate',
-            ico: path.join(__dirname, '../resources/translate.ico')
+            skipTaskbar: false,
+            title: 'Translate'
         });
-
+        
         mainWin.setMenu(null)
+        mainWin.setIcon(path.join(__dirname, '../resources/translate.ico'))
         mainWin.on('closed', ()=> mainWin = null)
         return mainWin
     }
