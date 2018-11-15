@@ -1,0 +1,28 @@
+{
+  "name": "translate",
+  "version": "1.0.0",
+  "description": "Tool to help build vocabulary",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "test",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/losonczylaci/translate.git"
+  },
+  "keywords": [
+    "electron",
+    "js",
+    "translate"
+  ],
+  "author": "Laszlo Losonczy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/losonczylaci/translate/issues"
+  },
+  "homepage": "https://github.com/losonczylaci/translate#readme",
+  "devDependencies": {
+    "electron": "^3.0.7"
+  }
+}
