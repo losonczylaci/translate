@@ -1,17 +1,17 @@
-export enum Language {
+export enum Languages {
     Auto = "auto",
-    Hungarian = "hu",
-    German = "de",
-    English = "en"       
+    Hu = "hu",
+    De = "de",
+    En = "en"       
 }
 
 export class gTranslate {
 
     baseUrl : string
-    _from : Language
-    _to : Language
+    _from : Languages
+    _to : Languages
 
-    constructor(from = Language.Auto, to = Language.Hungarian) {
+    constructor(from = Languages.Auto, to = Languages.Hu) {
         this.baseUrl = 'https://translate.google.com/' 
         this._from = from
         this._to = to
