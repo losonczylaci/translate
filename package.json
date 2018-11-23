@@ -24,7 +24,7 @@
   "homepage": "https://github.com/losonczylaci/translate#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "electron": "^3.0.7",
+    "electron": "^3.0.10",
     "mocha": "^5.2.0"
   }
 }
