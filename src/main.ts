@@ -8,6 +8,7 @@ export default class Main {
     static tray: Electron.Tray;
     static BrowserWindow: any;
     static Tray: any;
+    
     private static onWindowAllClosed() {
         if (process.platform !== 'darwin') {
             Main.application.quit();
@@ -15,7 +16,7 @@ export default class Main {
     }
 
     private static onClose() {
-        Main.mainWindow =  any;
+        Main.mainWindow =  null as any;
     }
 
     private static onReady() {
