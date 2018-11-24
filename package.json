@@ -2,10 +2,10 @@
   "name": "translate",
   "version": "1.0.0",
   "description": "Tool to help build vocabulary",
-  "main": "./src/main.js",
+  "main": "./build/app.js",
   "scripts": {
-    "test": "mocha test/**/*.spec.js",
-    "start": "electron ."
+    "test": "mocha -r ts-node/register test/**/*.spec.ts",
+    "start": "tsc && electron ."
   },
   "repository": {
     "type": "git",
@@ -23,8 +23,12 @@
   },
   "homepage": "https://github.com/losonczylaci/translate#readme",
   "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
     "chai": "^4.2.0",
     "electron": "^3.0.10",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.6"
   }
 }
