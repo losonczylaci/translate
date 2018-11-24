@@ -1,6 +1,5 @@
-
-import { BrowserWindow, Tray } from 'electron'
-var path = require('path');
+import { BrowserWindow, Tray, NativeImage, nativeImage } from 'electron'
+import path from 'path'
 
 export default class Main {
     static mainWindow: Electron.BrowserWindow;
@@ -27,22 +26,19 @@ export default class Main {
             title: 'Translate'
         });
 
-        Main.tray = new Main.Tray( Main.getIcoPath());
-        //Main.mainWindow.loadURL('file://' + __dirname + '/index.html');
         Main.mainWindow.setMenu( null);
-        Main.mainWindow.setIcon( Main.getIcoPath());
+        Main.tray = new Main.Tray( Main.getIco());
+        Main.mainWindow.setIcon( Main.getIco());
         Main.mainWindow.on('closed', Main.onClose);
     }
-
-    private static getIcoPath() {
-        return path.join( __dirname, '../resources/translate.ico');
+    
+    private static getIco() {
+        var p = path.join( __dirname, '../resources/translate.ico');
+        var img = nativeImage.createFromPath(p)
+        return img
     }    
 
-    static main(
-        app: Electron.App, 
-        browserWindow: typeof BrowserWindow,
-        tray: typeof Tray ) {
-
+    static main( app: Electron.App,  browserWindow: typeof BrowserWindow, tray: typeof Tray ) {
         Main.BrowserWindow = browserWindow;
         Main.Tray = tray;
         Main.application = app;
